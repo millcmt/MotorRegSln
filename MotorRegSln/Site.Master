@@ -6,14 +6,14 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> - MVR </title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/MVRLOGO-removebg-preview.png" rel="shortcut icon" type="image/x-icon" />
 
 </head>
 <body>
@@ -37,28 +37,67 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" runat="server" href="~/">Application name</a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+
+                <!-- Brand -->
+                <a class="navbar-brand" runat="server" href="~/MyVehicles.aspx">MVR</a>
+
+                <!-- Mobile toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact</a></li>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+
+                    <!-- LEFT SIDE NAV -->
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" runat="server" href="~/MyVehicles.aspx">My Vehicles</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" runat="server" href="~/About.aspx">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" runat="server" href="~/Contact.aspx">Contact</a>
+                        </li>
+
+                        <!-- Admin only -->
+                        <li class="nav-item" id="navAdmin" runat="server" visible="false">
+                            <a class="nav-link" runat="server" href="~/AdminDashboard.aspx">Admin Dashboard</a>
+                        </li>
+                    </ul>
+
+                    <!-- RIGHT SIDE NAV -->
+                    <ul class="navbar-nav ms-auto">
+
+                
+
+                        <!-- Logout -->
+                        <li class="nav-item" id="navLogout" runat="server" visible="false">
+                            <asp:LinkButton ID="btnLogout" runat="server" CssClass="nav-link text-warning"
+                                OnClick="btnLogout_Click">Logout</asp:LinkButton>
+                        </li>
+
+
+                        <!-- Login (only if not logged in) -->
+                        <li class="nav-item" id="navLogin" runat="server" visible="false">
+                            <a class="nav-link" runat="server" href="~/Login.aspx">Login</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> - MVR</p>
             </footer>
         </div>
     </form>
