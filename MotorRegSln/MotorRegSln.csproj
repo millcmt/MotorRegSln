@@ -238,15 +238,15 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
+
     <Compile Include="FitnessServices.asmx.cs">
       <DependentUpon>FitnessServices.asmx</DependentUpon>
       <SubType>Component</SubType>
-=======
+
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
->>>>>>> c51973ee72f39715a0eaf1dfb9b4b46bdcb7df0b
+
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
