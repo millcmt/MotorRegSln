@@ -24,7 +24,7 @@ namespace MotorRegSln
         {
             if (!IsPostBack)
             ShowSection("vehicles");
-            LoadVehicles();
+                LoadVehicles();
         }
 
         private void ShowSection(string section)
@@ -335,6 +335,7 @@ namespace MotorRegSln
             lblMessage.Text = "Vehicle added.";
             lblMessage.CssClass = "text-success";
 
+            pnlAddVehicle.Visible = false;
             LoadVehicles();
             ShowSection("vehicles");
         }

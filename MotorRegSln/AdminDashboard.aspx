@@ -67,7 +67,7 @@
 
     <h3>Vehicle Details</h3>
     <asp:Label ID="lblVehicleHeader" runat="server" CssClass="fw-bold" />
-    
+
     
     <hr />
 
@@ -116,7 +116,7 @@
 
     <asp:Button ID="btnAddReg" runat="server" Text="Add Registration"
         CssClass="btn btn-success mt-2" OnClick="btnAddReg_Click" />
-    
+
     
 
 
