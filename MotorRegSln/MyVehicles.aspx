@@ -3,7 +3,6 @@
 
     <h3 class="mb-4">My Vehicles</h3>
 
-    <asp:Button ID="btnLinkVehicle" runat="server" Text="Link a Vehicle" CssClass="btn btn-primary mb-4" OnClick="btnLinkVehicle_Click" />
 
     <asp:Repeater ID="rptVehicles" runat="server" OnItemCommand="rptVehicles_ItemCommand">
         <ItemTemplate>
