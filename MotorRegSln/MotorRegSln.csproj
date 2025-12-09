@@ -138,6 +138,7 @@
     <Content Include="InsuranceServices.asmx" />
     <Content Include="LinkVehicle.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="MVR.css" />
     <Content Include="MyVehicles.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="RenewRegistration.aspx" />

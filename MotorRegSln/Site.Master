@@ -12,9 +12,10 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
+    
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/MVRLOGO-removebg-preview.png" rel="shortcut icon" type="image/x-icon" />
-
+    <link rel="stylesheet" href="MVR.css" />
 </head>
 <body>
     <form runat="server">

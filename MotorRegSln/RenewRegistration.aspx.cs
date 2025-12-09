@@ -45,7 +45,7 @@ namespace MotorRegSln
                 SqlCommand cmd = new SqlCommand(@"
                     SELECT PlateNumber, ChassisNumber, Make, Model, Year
                     FROM Vehicles
-                    WHERE VehicleId=@id", conn);
+                    WHERE VehicleId=@id", conn);   
 
                 cmd.Parameters.AddWithValue("@id", VehicleId);
 
